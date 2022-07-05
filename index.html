@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Component Library</title>
+
+    <link href="style.CSS" rel="stylesheet" />
 </head>
 <body>
     <h1>Welcome to Arti's component library</h1>
@@ -17,6 +19,7 @@
     <h1>This is the biggest heading</h1>
     <h2>This is the second biggest</h2>
     <p>Let me show you the normal text. This is free flowing and will wrap at the end like a paragraph.</p>
+    <p>This paragraph will have a <strong>bold</strong>text</p>
     <small>This is relatively smaller text</small>
 
     <hr>
@@ -24,41 +27,42 @@
     <h2>@container</h2>
 
     <h3>fluid container</h3>
-    <div>This is a fluid container and it will go till the end of the page</div>
+    <div class="container">This is a fluid container and it will go till the end of the page</div>
 
     <h3>center container</h3>
-    <div>This is a centered container and it will go till the specified width</div>
+    <div class="container container-center"></div>This is a centered container and it will go till the specified width</div>
 
     <hr>
 
     <h2>@Linnks</h2>
 
-    <a href="/">Primary Link</a>
-    <a href="/">Secondary Link</a>
+    <a class="link link-primary"href="/">Primary Link</a>
+    <a class="link link-secondary"href="/">Secondary Link</a>
 
     <hr>
 
    <h2>@lists</h2> 
 
    <h3>unordered list</h3>
+   <p>This list will not have the bullet</p>
 
-   <ul>
+   <ul class="non-bullet">
       <li>Item One</li>
       <li>Item Two</li>
       <li>Item Three</li>
    </ul>
 
    <h3>unordered inline list</h3>
-
-   <ul>
-        <li>Inline Item One</li>
-        <li>Inline Item Two</li>
-        <li>Inline Item Three</li>
+   
+   <ul class="list-non-bullet">
+        <li class="list-item-inline">Inline Item One</li>
+        <li class="list-item-inline">Inline Item Two</li>
+        <li class="list-item-inline">Inline Item Three</li>
    </ul>
 
-   <h3>ordered list</h3>
+   <h3> reverse ordered list</h3>
 
-   <ol>
+   <ol reversed>
      <li>milk</li>
      <li>eggs</li>
      <li>break</li>
@@ -68,16 +72,19 @@
 
    <h2>@nav</h2>
 
-   <nav>
-      <div>iAmBrand</div>
-       <ul>
-           <li>
-              <a href="/">home</a>
+   <nav class="navigation container">
+      <div class="nav-brand">iAmBrand</div>
+       <ul class="list-non-bullet nav-pills">
+           <li
+              class="list-item-inline">
+              <a class="link link-active" href="/">home</a>
            </li>
-           <li>
+           <li
+            class="list-item-inline">
               <a href="/">products</a>
            </li>
-           <li>
+           <li
+            class="list-item-inline">
               <a href="/">about</a>
             </li>
        </ul>
@@ -86,31 +93,43 @@
    <hr>
 
    <h2>header</h2>
-  <header>
-      <img src="images/hero.svg.png" />
-      <h1>heading inside hero</h1>
+  <header class="hero">
+      <img class="hero-img"src="images/hero.svg.png" />
+      <h1 class="hero-heading">adarsh balika the<span class="heading-inverted">web developer</span></h1>
   </header>
 
     <hr>
     <h2>@section</h2>
-    <section>
-        <h3>white section</h2>
-        <p>This will have white background</p>
+    <section class="section">
+      <div class="container container-center">
+        <h1>white section</h1>
+        <p>We are an open community of developers building resources for a better Web, regardless of brand, browser, or platform. Anyone can contribute and each person who does makes us stronger. Together we can continue to drive innovation on the Web to serve the greater good. If starts here, with you.</p>
+      </div>
     </section>
     
-    <section>
-        <h3>off white section</h3>
-        <p>This will have gray background</p>
-   </section>
+    <section class="section ow">
+     <div class="container container-center">
+       <h1>off white section</h3>
+        <p>We are an open community of developers building resources for a better Web, regardless of brand, browser, or platform. Anyone can contribute and each person who does makes us stronger. Together we can continue to drive innovation on the Web to serve the greater good. If starts here, with you.</p>
+      </div>
+    </section>
 
    <hr>
 
-   <footer>
-     <div>Some small heading inside footer</div>
-       <ul>
-         <li>socialone</li>
-         <li>socialTwo</li>
-         <li>socialThree</li>
+   <h2>@footer</h2>
+
+   <footer class="footer">
+     <div class="footer-header">Some small heading inside footer</div>
+       <ul class="social-links non-bullet">
+         <li>
+           <a class="link-item-inline"> href="/">socialone</a>
+          </li>
+         <li>
+           <a class="link-item-inline"> href="/">socialTwo</a>
+         </li>
+         <li>
+            <a class="link-item-inline"> href="/">socialThree</a>
+          </li>
        </ul>
   </footer>
 
